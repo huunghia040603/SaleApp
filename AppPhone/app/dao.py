@@ -24,6 +24,6 @@ def get_products(kw):
         "image": "https://res.cloudinary.com/dxxwcby8l/image/upload/v1647248722/r8sjly3st7estapvj19u.jpg"
     }]
     if kw:
-        products =[p for p in products if p['name'].find(kw)>=0]
+        products =[p for p in products if p['name'].lower().find(kw)>=0]
     return products
 
